@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", background: "#f5f7fb" }}>
@@ -47,8 +48,9 @@ function Home() {
             Lost an item on campus? Submit details and let the system help you
             find possible matches.
           </p>
-          <a
-            href="/report-lost"
+
+          <Link
+            to="/report-lost"
             style={{
               display: "inline-block",
               background: "#2563eb",
@@ -59,7 +61,7 @@ function Home() {
             }}
           >
             Report Lost Item
-          </a>
+          </Link>
         </div>
 
         {/* FOUND */}
@@ -79,8 +81,9 @@ function Home() {
             Found an item on campus? Upload details and help return it safely to
             its owner.
           </p>
-          <a
-            href="/report-found"
+
+          <Link
+            to="/report-found"
             style={{
               display: "inline-block",
               background: "#16a34a",
@@ -91,7 +94,7 @@ function Home() {
             }}
           >
             Report Found Item
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -106,7 +109,6 @@ function Home() {
       >
         Secure · College-only Access · Powered by Firebase
       </div>
-
     </div>
   );
 }
