@@ -14,6 +14,7 @@ import Admin from "./pages/Admin";
 
 
 function App() {
+  const isLoggedIn = localStorage.getItem("accio_logged_in");
   return (
     <>
       <Navbar />
