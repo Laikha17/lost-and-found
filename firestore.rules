@@ -1,0 +1,19 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow anyone to read lost and found items
+    match /lost_items/{document=**} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true; // For now, allow all modifications
+    }
+    
+    match /found_items/{document=**} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true; // For now, allow all modifications
+    }
+  }
+}
+
